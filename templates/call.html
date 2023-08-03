@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Call</title>
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/call.css')}}">
+</head>
+<body>
+  <form action="/" method="POST">
+    <div class="div1">
+      <div class="input">
+        <label id="label_to">To<br></label>
+        <input type="text" name="to" value="{{to}}">
+      </div>
+
+      <div class="input">
+        <label id="label_from">From<br></label>
+        <input type="text" name="froms" value="{{froms}}">
+      </div>
+
+      <div class="input">
+        <label id="label_yoken">要件<br></label>
+        <textarea name="yoken" rows="10" cols="60">{{yoken}}</textarea>
+      </div>
+
+      <div class="output">
+        <label id="label_output">回答</label>
+        <button type="submit" class="button_output">更新</button>
+        <br>
+        <textarea id="textarea_output" rows="50" cols="120" disabled>{{Kaito}}</textarea>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
