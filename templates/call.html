@@ -10,27 +10,42 @@
   <form action="/" method="POST">
     <div class="div1">
       <div class="input">
-        <label id="label_to">To<br></label>
-        <input type="text" name="to" value="{{to}}">
-      </div>
-
-      <div class="input">
-        <label id="label_from">From<br></label>
-        <input type="text" name="froms" value="{{froms}}">
-      </div>
-
-      <div class="input">
-        <label id="label_yoken">要件<br></label>
-        <textarea name="yoken" rows="10" cols="60">{{yoken}}</textarea>
+        <div class="TF">
+          <div class="T">
+            <label>To</label>
+            <br>
+            <input type="text" name="to" value="{{to}}">
+          </div>
+          <div class="F">
+            <label>From</label>
+            <br>
+            <input type="text" name="fromCompany" value="{{fromCompany}}">
+            <br>
+            <input type="text" name="fromHuman" value="{{fromHuman}}">
+          </div>
+        </div>
+        <div class="requirement">
+          <label>要件</label>
+          <br>
+          <textarea name="requirement" rows="20" cols="40">{{requirement}}</textarea>
+        </div>
       </div>
 
       <div class="output">
-        <label id="label_output">回答</label>
-        <button type="submit" class="button_output">更新</button>
+        <label>回答</label>
+        <button type="submit" class="button_output" value="update">更新</button>
+        <label>不在</label>
+        {%- if showButton %}
+        <button type="submit" class="button_output" value="update">更新</button>
+        {%- else %}
+        <button type="submit" class="button_output" disabled>更新</button>
+        {%- endif %}
         <br>
-        <textarea id="textarea_output" rows="50" cols="120" disabled>{{Kaito}}</textarea>
+        <textarea class="textarea_output" rows="50" cols="100" disabled>{{Kaito}}</textarea>
       </div>
     </div>
+
+    
   </form>
 </body>
 </html>
