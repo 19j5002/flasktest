@@ -1,11 +1,49 @@
 .div1{
+    width: auto;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 
-.input{
-    width: 100;
-    padding: 20px 10px;
+div1, .input{
+    width: 50%;
+    height: auto;
+    /* padding: 20px 10px; */
     text-align: center;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TF{
+    width: 50%;
+    text-align: center;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.T{
+    width: 50%;
+}
+
+.F{
+    width: 50%;
+}
+
+.requirement{
+    width: 50%;
+    text-align: center;
+    font-size: large;
+}
+
+div1, .output{
+    width: 50%;
+    font-size: large;
+    text-align: center;
+}
+
+.textarea_output{
+    color: white;
+    font-size: large;
 }
